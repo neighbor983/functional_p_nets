@@ -1,11 +1,16 @@
+from dataclasses import dataclass
+from typing import Any
+
+
+@dataclass
 class Place:
-    def __init__(self, name, marking, success_place, player_observable, control, visited=False):
-        self.name = name
-        self.marking = marking
-        self.success_place = success_place
-        self.player_observable = player_observable
-        self.control = control
-        self.visited = visited
+    name: str
+    marking: int
+    success_place: Any
+    player_observable: bool
+    control: Any
+    visited: bool = False
+
 
 # def set_weight(self, new_weight):
 #     return Place(name=self.name, marking=new_weight, success_place=self.success_place,
